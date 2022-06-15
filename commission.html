@@ -24,7 +24,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul class="navbar-nav ms-auto">
-            <li><a class="nav-link active" href="#price">Price</a></li>
+            <li><a class="nav-link" href="#price">Price</a></li>
             <li><a class="nav-link" href="#ddn">Ddn</a></li>
             <li><a class="nav-link" href="#example">Example</a></li>
             <li><a class="nav-link" href="#moreinfo">More Info</a></li>
@@ -51,7 +51,7 @@
     </section>
     <!-- End Jumbroton -->
     <!--Price List-->
-    <section id="price">
+    <section id="price" class="background-price">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col-md">
@@ -171,56 +171,36 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="900">
-              <img src="assets/projects/6.jpg" class="card-img-top" alt="Project 6" />
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
-              <img src="assets/projects/7.png" class="card-img-top" alt="Project 7" />
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1100">
               <img src="assets/projects/8.jpg" class="card-img-top" alt="Project 8" />
             </div>
           </div>
           <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1200">
+            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
               <img src="assets/projects/9.png" class="card-img-top" alt="Project 9" />
             </div>
           </div>
           <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1300">
+            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1100">
               <img src="assets/projects/10.jpg" class="card-img-top" alt="Project 10" />
             </div>
           </div>
           <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1400">
+            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1200">
               <img src="assets/projects/12.jpg" class="card-img-top" alt="Project 12" />
             </div>
           </div>
           <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1500">
+            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1300">
               <img src="assets/projects/14.jpg" class="card-img-top" alt="Project 14" />
             </div>
           </div>
           <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1600">
+            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1400">
               <img src="assets/projects/15.jpg" class="card-img-top" alt="Project 15" />
             </div>
           </div>
           <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1700">
-              <img src="assets/projects/16.jpg" class="card-img-top" alt="Project 16" />
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1800">
-              <img src="assets/projects/17.jpg" class="card-img-top" alt="Project 17" />
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1900">
+            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1500">
               <img src="assets/projects/18.png" class="card-img-top" alt="Project 18" />
             </div>
           </div>
@@ -469,15 +449,13 @@
           .catch((error) => console.error("Error!", error.message));
       });
     </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
       AOS.init({
         once: true,
       });
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
     <script>
       gsap.registerPlugin(TextPlugin);
       gsap.to(".lead", {
@@ -504,6 +482,10 @@
         opacity: 0,
       });
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
   </body>
 </html>

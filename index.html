@@ -24,7 +24,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li><a class="nav-link active" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#home">Home</a></li>
             <li><a class="nav-link" href="#about">About</a></li>
             <li><a class="nav-link" href="#gallery">Project Gallery</a></li>
             <li><a class="nav-link" href="#socialmedia">Social Media</a></li>
@@ -49,7 +49,7 @@
     </section>
     <!-- End Jumbroton -->
     <!-- About -->
-    <section id="about">
+    <section id="about" class="about">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col-md">
@@ -112,56 +112,36 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="900">
-              <img src="assets/projects/6.jpg" class="card-img-top" alt="Project 6" />
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
-              <img src="assets/projects/7.png" class="card-img-top" alt="Project 7" />
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1100">
               <img src="assets/projects/8.jpg" class="card-img-top" alt="Project 8" />
             </div>
           </div>
           <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1200">
+            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
               <img src="assets/projects/9.png" class="card-img-top" alt="Project 9" />
             </div>
           </div>
           <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1300">
+            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1100">
               <img src="assets/projects/10.jpg" class="card-img-top" alt="Project 10" />
             </div>
           </div>
           <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1400">
+            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1200">
               <img src="assets/projects/12.jpg" class="card-img-top" alt="Project 12" />
             </div>
           </div>
           <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1500">
+            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1300">
               <img src="assets/projects/14.jpg" class="card-img-top" alt="Project 14" />
             </div>
           </div>
           <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1600">
+            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1400">
               <img src="assets/projects/15.jpg" class="card-img-top" alt="Project 15" />
             </div>
           </div>
           <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1700">
-              <img src="assets/projects/16.jpg" class="card-img-top" alt="Project 16" />
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1800">
-              <img src="assets/projects/17.jpg" class="card-img-top" alt="Project 17" />
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1900">
+            <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1500">
               <img src="assets/projects/18.png" class="card-img-top" alt="Project 18" />
             </div>
           </div>
@@ -244,25 +224,49 @@
         window.location = "#home";
       }
     </script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxekJk9X5ctY4H418d-s49K9fB6vPJf-jRvPgveTlc5bFsriK8_Z6Ff8BEfN-UV0Q/exec";
+      const form = document.forms["zion-order-commission"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+
+        fetch(scriptURL, {
+          method: "POST",
+          body: new FormData(form),
+        })
+          .then((response) => {
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            myAlert.classList.toggle("d-none");
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+
     <script>
       AOS.init({
         once: true,
       });
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
     <script>
       gsap.registerPlugin(TextPlugin);
       gsap.to(".lead", {
         duration: 2,
         delay: 1,
-        text: "Artist | Programmer | Content Creator",
+        text: "Commission",
       });
       gsap.from(".navbar", {
-        duration: 2,
+        duration: 1.5,
         y: -100,
         opacity: 0,
         ease: "bounce",
@@ -280,6 +284,10 @@
         opacity: 0,
       });
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
   </body>
 </html>

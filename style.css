@@ -1,5 +1,14 @@
-.jumbotron {
+.section {
+  margin: 0;
   padding-top: 6rem;
+}
+.jumbotron {
+  padding-top: 10rem;
+  background-color: #e2edff;
+  text-align: center;
+}
+.about {
+  padding-top: 10rem;
   background-color: #e2edff;
   text-align: center;
 }
@@ -10,15 +19,23 @@
 
 .background-gallery {
   background-color: #e2edff;
+  padding-top: 10rem;
 }
 .background-example {
   background-color: #ffff;
+  padding-top: 10rem;
 }
 .background-ddn {
   background-color: #e2edff;
+  padding-top: 10rem;
 }
 .background-moreinfo {
   background-color: #e2edff;
+  padding-top: 10rem;
+}
+.background-price {
+  background-color: #ffff;
+  padding-top: 10rem;
 }
 
 #socialmedia .button {
@@ -160,10 +177,6 @@ footer {
   border: none;
 }
 
-section {
-  padding-top: 5rem;
-}
-
 #tutorial .img-example {
   width: 110%;
   padding-bottom: 5px;
@@ -208,13 +221,16 @@ section {
 
 .background-contact {
   background-color: #e2edff;
+  padding-top: 10rem;
 }
 .background-socialmedia {
   background-color: #ffff;
+  padding-top: 10rem;
 }
 
 .background-form {
   background-color: #ffff;
+  padding-top: 10rem;
 }
 
 .img-payment1 {
